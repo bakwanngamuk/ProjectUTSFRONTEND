@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  :root {
+    --bg-color: #000000;
+    --second-bg-color: #ffffff;
+    --text-color: #ffffff;
+    --main-color: #254bf6;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+  }
+  
+  section {
+    min-height: 100vh;
+    padding: 10rem 12% 10rem;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 12%;
+    z-index: 5;
+    display: flex;
+    align-items: center; /* Centers logo and menu vertically */
+    justify-content: space-between; /* Keeps logo and menu icon separated */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    height: 8rem;
+  }
+  
+  /* Center the logo */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .logo:hover {
+    transform: translateX(-50%) scale(1.1); /* Keep the centering on hover */
+  }
+  
+  .logo span {
+    text-shadow: 0 0 25px var(--main-color);
+  }
+  
+  /* Hamburger Menu Icon */
+  .menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 2rem;
+    align-self: center;
+    position: absolute;
+    right: 2rem; /* Moves to the far right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+  }
+  
+  .hamburger-menu {
+    width: 100%;
+    height: 0.4rem;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  
+  .navbar.active {
+    display: flex;
+  }
+  
+  .navbar a {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    border-bottom: 3px solid var(--main-color);
+  }
+  
+  .article-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .subheading {
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-bottom: 5px;
+    color: #666;
+  }
+  
+  .date {
+    font-size: 1.4rem;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .content p {
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: 1.8rem; /* Tambahkan ukuran font disini */
+    line-height: 1.8; /* Tambahkan line-height untuk spasi antar baris */
+  }
+  
+  .product-links {
+    margin-top: 20px;
+  }
+  
+  .product-links p {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 15px; /* buat jarah antara text produk yang di pakai dan link */
+  }
+  
+  .product-links ul {
+    list-style-type: none;
+  }
+  
+  .product-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .product-links ul li a {
+    font-size: 1.6rem;
+    color: var(--main-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .product-links ul li a:hover {
+    color: #ff6347;
+  }
+
+  /* CSS untuk tombol kembali di pojok kiri atas */
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4caf4f00; /* Warna hijau */
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.back-button:hover {
+    background-color: #45a04900; /* Warna hijau yang lebih gelap saat hover */
+}
